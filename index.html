@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,13 +17,31 @@
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
+<meta name="" content="content">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body >
+<body  onload="hidepreloader()">
+<div id="loading">
 
-
-
+</div>
+<div id="popupalert">
+  <div class="news">
+  <h2>Sign Up</h2>
+  <form class="form-inline">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="First Name" name="">
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Last Name" name="">
+    </div>
+  </form>
+  <input type="text" class="form-control wid" placeholder="Email" name="">
+  <div class="text-center">
+  <button class="submitbtn btn btn-primary mt-4">Submit</button>
+  <button class="submitbtn btn btn-primary mt-4">Later</button>
+  </div>
+  </div>
+</div>
 	<!--------Navigation Bar--------->
 <nav class="navbar navbar-expand-lg">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,11 +75,12 @@
       </li>
       <li class="nav-item nav1">
        <a class="nav-link" href="#testimonials">TESTIMONIALS</a> 
-       </li>  
+       </li> 
     </ul>
   </div>
 </nav>
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+<div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1" class="cindi"></li>
@@ -73,19 +91,20 @@
       <img class="d-block img-fluid w-100" src="business1.jpeg" alt="First slide">
       <div class="carousel-caption">
       <h2 class="carh2">Build Professional Websites</h2>
-      <button class="btn btn-pink">Build Now
-      </button>
+      <h3 class="type"> </h3>
+
+      <button class="btn btn-pink carousel-btn">Build Now</button>
        </div>
      </div>
     <div class="carousel-item">
-      <img class="d-block img-fluidw-100" src="business4.jpeg" alt="Second slide">
+      <img class="d-block img-fluid w-100" src="business4.jpeg" alt="Second slide">
       <div class="carousel-caption">
        <h3>Buy Cheap Life Time Hosting Plan</h3>
        <button class="btn btn-pink">Get Now</button>
        </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block img-fluidw-100" src="business5.jpeg" alt="Third slide">
+      <img class="d-block img-fluid w-100" src="business3.jpeg" alt="Third slide">
       <div class="carousel-caption">
        <h3 class="text-dark">Get SEO Under Low Prices</h3>
      </div>
@@ -109,12 +128,11 @@
        <p>The carousel is a slideshow for cycling through a series of content, built with CSS 3D transforms and a bit of JavaScript. It 
 In browsers where the Page Visibility API is supported, the carousel will avoid sliding when the webpage is not visible to the user (such as when the browser tab is inactive, the browser window is minimized, etc.).
 </p>
-
     </div>
-    <div class="col-md-6 ">
+    <div class="col-md-6">
        <h2>Adope Photoshop</h2>
     <div class="progress">
-      <div class="progress-bar" style="width: 85%;">85%</div>
+      <div class="progress-bar">85%</div>
      </div>
      <h2>Responcive Layout</h2>
      <div class="progress">
@@ -188,12 +206,8 @@ In browsers where the Page Visibility API is supported, the carousel will avoid 
 </section>
 <!---Our Team---------->
 <section id="ourteam" class="pt-5 pb-5" data-aos="fade-right" data-aos-duration="2000">
-  <div class="container-fluid swiper-container">
+  <div class="container-fluid">
     <h1>Our Team</h1><br>
-    <div class="search m-auto">
-      <input type="text" class="form-control w-50" name="" placeholder="Search For Our Team Members">
-      <button type="submit" class="btn btn-success btn-search">SEARCH</button>
-    </div>
     <div class="row ml-auto">
       <div class="col-lg-3 col-md-10 col-sm-10 col-10 m-auto">
         <img src="profile1.jpeg">
@@ -223,7 +237,7 @@ In browsers where the Page Visibility API is supported, the carousel will avoid 
   <h1 class="heading"> Pricing Plans </h1>
   <h2 class="text-center mb-5">Domains We Provide</h2>
    <div class="row">
-     <div class="col-md-3 col-sm-10 col-10">
+     <div class="col-md-3 col-sm-10 col-10" data-aos="fade-up">
     <h1 class="text-center" style="color:purple; ">.com</h1>
        <h2 class="text-center">$8.99<sub style="font-size: 12px;">/yr</sub></h2><br>
        <div class="d-flex align-items-center justify-content-center">
@@ -258,14 +272,14 @@ In browsers where the Page Visibility API is supported, the carousel will avoid 
     <h1 class="text-center" style="color:purple; ">.store</h1>
        <h2 class="text-center">$10<sub style="font-size: 12px;">/yr</sub></h2><br>
        <div class="d-flex align-items-center justify-content-center">
-       <a  href="index.html"  class="btn-purple">REGISTER</a>
+       <a     onclick="mygun()"  class="btn-purple">REGISTER</a>
      </div>
      </div>
       <div class="col-md-3 col-sm-10 col-10">
     <h1 class="text-center" style="color:purple; ">.site</h1>
        <h2 class="text-center">$14.99<sub style="font-size: 12px;">/yr</sub></h2><br>
        <div class="d-flex align-items-center justify-content-center">
-       <a  class="btn-purple">REGISTER</a>
+       <a  class="btn-purple"   onclick="mygun()">REGISTER</a>
      </div>
      </div>
 
@@ -273,7 +287,7 @@ In browsers where the Page Visibility API is supported, the carousel will avoid 
     <h1 class="text-center" style="color:purple; ">.net</h1>
        <h2 class="text-center">$11.00<sub style="font-size: 12px;">/yr</sub></h2><br>
        <div class="d-flex align-items-center justify-content-center">
-       <a  class="btn-purple">REGISTER</a>
+       <a  class="btn-purple"   onclick="mygun()">REGISTER</a>
      </div>
      </div>
 
@@ -281,7 +295,7 @@ In browsers where the Page Visibility API is supported, the carousel will avoid 
     <h1 class="text-center" style="color:purple; ">.org</h1>
        <h2 class="text-center">$15.00<sub style="font-size: 12px;"></h2><br>
        <div class="d-flex align-items-center justify-content-center">
-       <a  class="btn-purple">REGISTER</a>
+       <a  class="btn-purple"   onclick="mygun()">REGISTER</a>
      </div>
      </div>
 
@@ -289,7 +303,7 @@ In browsers where the Page Visibility API is supported, the carousel will avoid 
     <h1 class="text-center" style="color:purple; ">.eu</h1>
        <h2 class="text-center">$9.00<sub style="font-size: 12px;">/yr</sub></h2><br>
        <div class="d-flex align-items-center justify-content-center">
-       <a  class="btn-purple">REGISTER</a>
+       <a  class="btn-purple"   onclick="mygun()">REGISTER</a>
      </div>
      </div>
    </div>
@@ -298,33 +312,34 @@ In browsers where the Page Visibility API is supported, the carousel will avoid 
 
 </section>
 <!-----offers----->
-<section id="offers" class="pt-5 pb-5">
+<section id="offers" class="pt-5 pb-5" data-aos="fade-right ">
   <div class="container-fluid text-center clear2 p-5 w-100">
     <h1 class="text-center m-auto">Offers</h1>
     <h2 class="text-center">Get Free  Web Hosting and Domain </h2>
-    <a href="#" class="btn btn-primary">Get Now</a>
+    <a href="#" class="btn btn-primary" >Get Now</a>
   </div>
 </section>
 <!-----Testimonials------>
 <section id="testimonials" class="pt-5 pb-5" data-aos="fade-up">
-    <div class="container">
-      <h1>Testimonials</h1>
+    <div class="container d-flex align-items-center">
+      <h1 class="text-center m-auto">Testimonials</h1>
       <div class="row">
         <div class="col-lg-4 col-md-10 col-sm-12 col-12">
           <div class="profile">
-             <img src="profile1.jpeg" class="ml-auto mr-auto">
+           <img src="profile1.jpeg" class="ml-auto mr-auto test1">
              <h3>Avinash kt <span><br>Founder of Foodhome</span></h3>
              <p>
-              
+              <i class="fa fa-quote-left"></i>  
               This website provides best type fo service ever I bought 
               $10 plan and they provided me 10 domains and webhosting 
               they said for their first 100 customers 10 domains will be provided instead of 5. 
+              <i class="fa fa-quote-right"></i>  
              </p>
           </div>
         </div>
         <div class="col-lg-4 col-md-10 col-sm-12 col-12">
           <div class="profile">
-             <img src="profile2.jpeg" class="ml-auto mr-auto">
+             <img src="profile2.jpeg" class="ml-auto mr-auto test1">
            <h3>Prabhakar kt <span><br>CEO/Manager of Toymass </span></h3>
              <p>
              
@@ -336,7 +351,7 @@ In browsers where the Page Visibility API is supported, the carousel will avoid 
         </div>
         <div class="col-lg-4 col-md-10  col-sm-12 col-12">
           <div class="profile">
-             <img src="profile3.jpeg" class="ml-auto mr-auto">
+             <img src="profile3.jpeg" class="ml-auto mr-auto test1">
              <h3>Ramanand <span><br>Manager of Foodhome</span></h3>
              <p>
              
@@ -349,6 +364,8 @@ In browsers where the Page Visibility API is supported, the carousel will avoid 
         </div>
       </div>
     </div>
+    <div class="text-center">
+  </div>
 </section>
 <!----Get In Touch--->
 <section id="touch" class="pt-5 pb-5">
@@ -366,42 +383,64 @@ In browsers where the Page Visibility API is supported, the carousel will avoid 
        <input type="password" required name="passoword" autocomplete="off" id="passoword" class="form-control" title="passord ">
                </div>
                <div class="form-group">
-               	<label>Email:</label>s
+               	<label>Email:</label>
        <input type="email" required name="Email" id="Email" autocomplete="off" class="form-control" title="email">
                </div>
-               <input type="submit" name="" class="btn btn-danger">
+               <div class="form-group">
+    </div>
+  <button class="btn btn-neon w-50 text-white ml-auto" type="submit" name="action">Submit</button>
         </form>
         </div>
         <div class="col-md-6 touch social_media" data-aos="flip-right">
             <h2>Througn Social Media</h2>
             <a href="#" class="facebook"><i class="fa fa-facebook-official"></i>Facebook</a>
             <a href="#" class="twitter"><i class="fa fa-twitter"></i>twitter</a>
-            <a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i>Insatagram</a>
+            <a href="#" class="youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i>Youtube</a>
         </div>
       </div>
    </div>
   </section>
+
 <!---Footer---->
 <section id="footer" class="bg-dark">
   <p>Made With <i class="fa fa-heart-o"></i>Priyansh Baheti</p>
- 
   </div>
 </section>
  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>  <script>
     AOS.init();
   </script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <script type="text/javascript">
-	$('.btn-purple').click(function(){
-		swal({
-  title: "Good job!",
-  text: "You clicked the button!",
-  icon: "success",
-  button: "Aww yiss!",
-});s
-	});
+	function mygun(){
+             swal({
+         title: "Thanks  for buying our plan ! ",
+         text: "click the ok button to continue ",
+         icon: "success",
+         buttons: true,
+         dangerMode: false,
+       })
+       .then((willDelete) => {
+         if (willDelete) {
+           swal("Input your Email To continue", {
+             icon: "success",
+             text:"input your email to continue",
+             content: 'input',
+           });
+         } else {
+           swal("");
+         }
+       });
+	}
+
+
+var username = document.getElementById('username');
+$('#username').keyup(function(){
+   if (username.value.length <=2 || username.value.length >20) {
+    alert("Length of username must be between 2 and 20");
+   }
+});
 	$('.fa-bars').show();
 	$('.fa-times').hide();
 	$('.fa-bars').click(function(){
@@ -412,11 +451,64 @@ In browsers where the Page Visibility API is supported, the carousel will avoid 
 	   $('.fa-bars').show();
 	   $('.fa-times').hide();
 	});
-    $(document).ready(function(){
-    	$('.nav-item').click(function(){
-  $(this).css("border","1px solid orange"s).siblings().css("border","none")};
-    });
-  
+ function showLocation(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+            alert("Latitude : " + latitude + " Longitude: " + longitude);
+         }
+
+         function errorHandler(err) {
+            if(err.code == 1) {
+               alert("Error: Access is denied!");
+            } else if( err.code == 2) {
+               alert("Error: Position is unavailable!");
+            }
+         }
+			
+         function getLocation() {
+
+            if(navigator.geolocation) {
+               
+               // timeout at 60000 milliseconds (60 seconds)
+               var options = {timeout:60000};
+   +            navigator.geolocation.getCurrentPosition(showLocation, errorHandler, options);
+            } else {
+               alert("Sorry, browser does not support geolocation!");
+            }
+         }
+         var typed = new Typed(".type", {
+  strings: [
+     "Hello world",
+     "I am Priyansh Baheti",
+     "I am a Web Developer",
+     "This Is My Website",
+     "I have a lots of awesome content here",
+     "I have made this website",
+     "Please share this with your friends",
+     "Thanks you!"
+  ],
+  typeSpeed:20,
+  backSpeed:20,
+  loop:true
+});
+function hidepreloader(){
+  document.getElementById('loading').style.display = "none";
+}
+$(document).ready(function(){
+   setTimeout(function(){
+     $('#popupalert').css('display','block');
+   },5000)
+   $('.submitbtn').click(function(){
+      $('#popupalert').hide();
+   });
+});
+
+
+
+
+
+
 
 </script>
+
 </html>
