@@ -1,23 +1,72 @@
 *{
 	margin: 0;
 	padding: 0;
-    flex-wrap: wrap;s
+    flex-wrap: wrap;
     box-sizing: border-box;  
 }
 html{
-	scroll-behavior: smooth;
+	 scroll-behavior: smooth; 
+}
+body{
+	background-color: white;
+}
+#loading{
+	background:#fff 
+	url(loading.gif) 
+	center no-repeat;
+	height: 100vh;
+	width: 100%;
+	z-index: 999999999999999999999999999999999999999999999999;
+	position: fixed;
+}
+#popupalert{
+	height: 100%;
+	width: 100%;
+	background-color: rgba(16,16,16,.6);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	z-index: 100000000000000000000000000001;
+	color: black!important;
+   display: none;
+ }
+.news{
+	background: #fff url(technology.jpeg);
+	height: 400px;
+	width: 700px;
+	background-size: 100% 100%;
+	padding: 20px;
+	position: relative;
+	border-radius: 5%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.news h2{
+	margin-top: 5px;
+	color: #000;
+	text-align: center;
+	font-size: 50px;
+}
+.news input:nth-child(1),
+.news input:nth-child(2)
+{
+   margin-left: 80px;
+   margin-top: 60px;
+}
+.news input:nth-child(3){
+	width: 75%;
+	margin-top: 30px;
+	margin-right: auto;
+	margin-left: auto;
 }
 .navbar{
 	background-color: #000!important;
 	box-shadow: 1px 2px 1px rgba(0,0,0,0.6);
-    top: 0%;
+    top: 0;
    font-family: 'Open Sans', sans-serif;
    position: sticky;
    z-index: 10000;
-}
-.navbar-toggler-icon{
-	background: #fff;
-	border-color: #000;
 }
 .navbar-brand{
 	color: #fff!important;
@@ -29,13 +78,11 @@ html{
 	padding: 10px 30px!important;
 	text-align: center;
 }
-
-.navbar-nav a:hover{
-	background: #0000;
-	color: orange;
+.slide{
+	width: 100%;
 }
 #aboutus{
-	background:#000;
+	background:#000!important;
 	color: #fff;
 }
 #aboutus h1{
@@ -56,9 +103,7 @@ html{
 	background-color: #81ecec;
 	height: 5px;
 	width: 0%;
-
 }
-
 
 .carousel img{
 	height: 100vh;
@@ -73,10 +118,48 @@ html{
      font-size: 40px;
  }
 
- 
-.carousel
+
 .col-md-6{
 	padding: 20px 30px;
+}
+.progress-bar{
+	animation: pro 1s linear forwards;
+}
+@keyframes pro{
+	0%{
+		width: 10%;
+	}
+	10%{
+		width: 20%;
+	}
+	20%{
+		width: 20%;
+	}
+	30%{
+		width: 30%;
+	}
+	40%{
+		width: 40%;
+	}
+	50%{
+		width: 50%;
+	}
+	60%{
+		width: 60%;
+	}
+	70%{
+		width: 70%;
+	}
+	80%{
+		width: 80%;
+	}
+	90%{
+		width: 90%;
+	}
+	100%{
+		width: 100%;
+	}
+
 }
 .col-md-6 p{
 	margin: 30px;
@@ -235,6 +318,11 @@ html{
 .clear:hover{
    background-color: blue;
 }
+.btn-green{
+	background: lightgreen!important;
+	color: white!important;
+	padding: 14px 20px!important;
+}
 #offers h1{
 	color:#fff;
     text-align: center;
@@ -312,36 +400,36 @@ color: white;
 	padding:10px 50px;
 	background-color: transparent;
 	text-align: center;
-	border: 3px solid #3498db;
-    box-shadow: inset 0 0 0 0 #3498db;
+	border: 3px solid green;
+    box-shadow: inset 0 0 0 0 green;
 	transition: .8s;
 	color: #3498db;
 	margin-top: 30px;
 }
 .twitter:hover{
-    box-shadow: inset  0px 100px 0 0px  #3498db;
+    box-shadow: inset  0px 100px 0 0px  green;
 }
 .twitter .fa{
 	margin: 5px;
 }
-.instagram .fa{
+.youtube .fa{
 	margin: 5px;
 }
-.instagram{
+.youtube{
 	padding:10px 50px;
 	background: transparent;
-	border-top: 3px solid orange;
-	border-left: 3px solid purple;
-	border-bottom: 3px solid orange;
-	border-right: 3px solid purple;
+	border-top: 3px solid red;
+	border-left: 3px solid red;
+	border-bottom: 3px solid red;
+	border-right: 3px solid red;
 	color: white!important; 
 	text-align: center;
-	box-shadow: inset 0 0 0 0 orange;
+	box-shadow: inset 0 0 0 0 red;
 	margin-top: 20px;
 	transition: .8s !important;
 }
-.instagram:hover{
-	box-shadow:inset  -600px 0 0 0 orange;
+.youtube:hover{
+	box-shadow:inset  -600px 0 0 0 red;
 }
 .touch{
 	margin-top: 20px;
@@ -390,12 +478,23 @@ color: white;
 }
 #testimonials .profile:hover{
 	box-shadow: 0px 14px 15px rgba(0,0,0,0.7);
+	background: linear-gradient(red,blue);
+	color: white!important;
+	transition:background 1s ease-out;
+}
+#testimonials .profile:hover h3 span,
+#testimonials .profile:hover .fa
+{
+	color: white;
 }
 #testimonials h1{
 	color: #555;
 	padding-bottom: 100px;
 	text-align: center;
 	position: relative;
+}
+.navbar-nav li.active{
+	color:orange;
 }
 #testimonials h1::after{
 	content: 'r';
@@ -414,18 +513,9 @@ color: white;
 	color: white;
 	padding: 10px 20px;
 }
-.profile p::before{
-   content: open-quote;
-   font-size: 30px;
-   color: #007bff;
-   font-weight: 600;
-}
-.profile p::after{
-   content: close-quote;
-   font-size: 30px;
-   color: #007bff;
-   display: inline-block;
-   font-weight: 600;
+.fa-quote-left,
+.fa-quote-right{
+	color: blue;
 }
 #ourteam .col-lg-3{
 	background-color: rgba(0,0,0,0.1);
@@ -495,7 +585,29 @@ color: white;
 	text-align: center;
 	position: relative;
 }
-
+.carousel-btn::after{
+     content: 'Get Your Website Online Now';
+     background: blue;
+     color: white;
+     padding: 1em 2em;
+     font-size: 0.8em;
+     border-radius: 30%;
+     position: absolute;
+     left: -10px;
+     bottom: 175px;
+     transform: scale(0);
+}
+.carousel-btn:hover::after{
+   animation: expand .3s linear forwards;
+}
+@keyframes expand{
+	0%{
+		transform: scale(.5);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
 #pricingplans .heading::after{
 	content: 'r';
 	color: transparent;
@@ -532,20 +644,24 @@ color: white;
 .dropdown-menu{
 	background: rgba(0,0,0,0.4);
 }
-form{
+.form{
 	 background: #fff!important;
 	 padding: 20px;
-	 color:black;
+	 color:  black;
 }
-form .form-control{
-	 border: 2px solid #ff6b81 !important;
+.form .form-control{
+	 border: 2px solid #07D3B8   !important;
 	 border-radius: 0px !important;
 	 background: transparent;
 	 color: black;
 }
-form .form-control:focus{
+.form .form-control:focus{
 	background: transparent;
 	box-shadow: none;
+}
+.form .btn-neon{
+	background: #07D3B8;
+	color: #fff!importants;
 }
  .carousel-indicators li{
  	border-radius: 100%;
@@ -560,17 +676,12 @@ form .form-control:focus{
  	display: flex;
  	align-items: center;
  	justify-content: center;
-    padding-bottom: 100px;
+   padding-bottom: 50px;
  }
  .search .form-control::placeholder{
- 	color: #000;
+ 	color: #fff;
  }
-.search .form-control:focus{
-	box-shadow: 2px 3px 15px pink;
-}
-.btn-search{
-	border-radius: 5%;
-}
+
 .search::before
 {
 	content: '';
@@ -593,18 +704,37 @@ form .form-control:focus{
 	{
 		opacity: 0;
 	}
+	.carousel-caption h3{
+		font-size: 20px;
+	}
 }
 @media (max-width: 890px){
      .carousel-item img{
      	height: 30%;
+     	width: 100%;
+     }
+     .carousel{
+     	width: 100%;
      }
      .nav1{
      	opacity: 1;
      }
      .carousel-caption h2{
-        font-size: 25px;
+        font-size: 20px;
+        color: black;
+     } 
+     .type{
+     	color: black;
      }
-
+     li[data-target="#carouselExampleIndicators"]{
+     	display: none;
+     }
+     .search{
+     	padding-bottom: 25px;
+     }
+     .carousel-btn::after{
+     	display: none;
+     }
 }
 
 
