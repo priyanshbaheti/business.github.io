@@ -1,7 +1,7 @@
 *{
 	margin: 0;
 	padding: 0;
-    flex-wrap: wrap;d
+    flex-wrap: wrap;
     box-sizing: border-box;  
 }
 html{
@@ -29,7 +29,7 @@ body{
 	position: fixed;
 	z-index: 100000000000000000000000000001;
 	color: black!important;
-   display: none;
+    display: none;
  }
 .news{
 	background: #fff url(technology.jpeg);
@@ -47,12 +47,13 @@ body{
 	color: #000;
 	text-align: center;
 	font-size: 50px;
-
+}
 .news input:nth-child(1),
 .news input:nth-child(2)
 {
-   margin-left: 80px;
-   margin-top: 60px;
+	width: 75%;
+    margin-left: auto;	
+    margin-right: auto;
 }
 .news input:nth-child(3){
 	width: 75%;
@@ -734,6 +735,16 @@ color: white;
      }
      .carousel-btn::after{
      	display: none;
+     }
+     #popupalert input{
+     	display: block!important;
+     	width: 200px;
+     }
+     #popupalert .news{
+     	width: 300px;
+     }
+     #popupalert h1{
+     	color: white!important;
      }
 }
 
